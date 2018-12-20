@@ -20,7 +20,7 @@ function makeObject(declarations, options) {
     } else {
         // remove dollar sign of each variable
         var name = declaration.variable.value.replace('$', '');
-        var value = declaration.variable.value.replace('px', '');
+        var value = declaration.value.value.replace('px', '');
         output[name] = parseInt(value);
     }
   });
