@@ -18,7 +18,9 @@ function makeObject(declarations, options) {
         output[declaration.variable.value] = declaration.value.value;
       }
     } else {
-      output[declaration.variable.value] = declaration.value.value;
+        // remove dollar sign of each variable
+        var name = declaration.variable.value.replace('$', '');
+        output[name] = declaration.value.value;
     }
   });
 
